@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dev Challenge 2025</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f5f5;
+    }
+
+    header {
+      background-color: #222;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background: #333;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav button {
+      background: #444;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin: 0 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    nav button:hover {
+      background: #666;
+    }
+
+    section {
+      display: none;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h2 {
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Dev Challenge 2025</h1>
+  </header>
+
+  <nav>
+    <button onclick="showSection('inicio')">Inicio</button>
+    <button onclick="showSection('registro')">Registro</button>
+    <button onclick="showSection('quees')">¿Qué es?</button>
+    <button onclick="showSection('noticias')">Noticias</button>
+    <button onclick="showSection('proyectos')">Proyectos</button>
+    <button onclick="showSection('ediciones')">Ediciones</button>
+  </nav>
+
+  <section id="inicio" class="active">
+    <h2>Inicio</h2>
+    <ul>
+      <li>¿Qué es el Dev Challenge, objetivo del evento?</li>
+      <li>Requisitos mínimos para participar</li>
+      <li>Fechas, premios para los ganadores y reconocimientos</li>
+      <li>Fechas o hitos del dev challenge</li>
+      <li>Sección dedicada a patrocinadores</li>
+      <li>Contacto</li>
+    </ul>
+  </section>
+
+  <section id="registro">
+    <h2>Registro</h2>
+    <ul>
+      <li>Formulario de inscripción</li>
+      <li>Requisitos mínimos</li>
+      <li>¿Cómo participo?</li>
+      <ul>
+        <li>Nombre del proyecto</li>
+        <li>Por qué se alinea con el dev challenge</li>
+        <li>Integrantes</li>
+      </ul>
+      <li>Preguntas frecuentes</li>
+    </ul>
+  </section>
+
+  <section id="quees">
+    <h2>¿Qué es el Dev Challenge?</h2>
+    <ul>
+      <li>Temática del evento</li>
+      <li>Descripción de las fases del challenge</li>
+      <li>Preguntas frecuentes</li>
+    </ul>
+  </section>
+
+  <section id="noticias">
+    <h2>Noticias del evento</h2>
+    <p>Aquí irán las últimas novedades del Dev Challenge.</p>
+  </section>
+
+  <section id="proyectos">
+    <h2>Proyectos Participantes</h2>
+    <ul>
+      <li>Nombre</li>
+      <li>Integrantes</li>
+      <li>Descripción</li>
+      <li>Fotografía</li>
+    </ul>
+  </section>
+
+  <section id="ediciones">
+    <h2>Ediciones Pasadas</h2>
+    <ul>
+      <li>Edición 2024</li>
+      <li>Edición 2025</li>
+    </ul>
+  </section>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(section => section.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+  </script>
+
+</body>
+</html>
