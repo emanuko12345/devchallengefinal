@@ -1,28 +1,26 @@
-/* General */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f2f2f2;
-  color: #333;
+  background-color: #a3d2f2; /* azul celeste suave */
+  color: #1a1a2e; /* azul oscuro para buen contraste */
 }
 
 header {
-  background-color: #1e1e2f;
+  background-color: #3282b8; /* azul medio */
   color: white;
   padding: 20px;
   text-align: center;
 }
 
-/* Navegación */
-.main-nav {
-  background-color: #2e2e3e;
+nav {
+  background-color: #1e6091; /* azul más oscuro */
   padding: 10px;
   text-align: center;
 }
 
-.main-nav button {
-  background-color: #4c4c6d;
+nav button {
+  background-color: #1769aa; /* azul */
   color: white;
   border: none;
   padding: 10px 15px;
@@ -32,23 +30,17 @@ header {
   transition: background-color 0.3s ease;
 }
 
-.main-nav button:hover {
-  background-color: #6b6b9d;
-}
-
-/* Contenido principal */
-main {
-  max-width: 960px;
-  margin: 20px auto;
-  padding: 20px;
+nav button:hover {
+  background-color: #7ec8e3; /* celeste claro */
+  color: #1e6091; /* azul oscuro para el texto */
 }
 
 section {
   display: none;
-  background-color: #ffffff;
+  background-color: #9ecae1; /* celeste */
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(46, 117, 182, 0.2);
 }
 
 section.active {
@@ -56,18 +48,20 @@ section.active {
 }
 
 h2 {
-  color: #1e1e2f;
+  color: #0b3d91; /* azul oscuro */
 }
 
-/* Listas */
+/* Aquí se modifica ul para usar grid y hacer 3 columnas */
 ul {
-  padding-left: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px; /* espacio entre columnas */
   list-style-type: disc;
+  padding-left: 20px;
 }
 
-/* Responsive */
-@media screen and (max-width: 768px) {
-  .main-nav button {
+@media (max-width: 768px) {
+  nav button {
     display: block;
     margin: 10px auto;
     width: 90%;
